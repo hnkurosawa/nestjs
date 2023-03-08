@@ -152,5 +152,6 @@ https://commitlint.js.org/#/
 
 ### husky設定
 ```shell
+% pnpm husky add .husky/commit-msg "pnpm commitlint --edit ${1}"
 
 ```
