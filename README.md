@@ -149,3 +149,8 @@ https://commitlint.js.org/#/
 # moduleの作成
 % echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commitlint.config.js
 ```
+
+### husky設定
+```shell
+
+```
