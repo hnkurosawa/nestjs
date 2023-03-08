@@ -151,7 +151,33 @@ https://commitlint.js.org/#/
 ```
 
 ### husky設定
+huskyでcommitlintの実行を走らせる
+
 ```shell
 % pnpm husky add .husky/commit-msg "pnpm commitlint --edit ${1}"
 
+```
+
+テストしてみる
+```shell
+% git add .
+
+### エラーを出してみる
+% git commit -m 'testdayo'
+⧗   input: testdayo
+✖   subject may not be empty [subject-empty]
+✖   type may not be empty [type-empty]
+
+✖   found 2 problems, 0 warnings
+ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+
+husky - commit-msg hook exited with code 1 (error)
+
+### 正しい
+% git commit -m 'chore: readme'
+[develop b2835be] chore: readme
+ 1 file changed, 1 insertion(+)
+
+### 正しいのでpushする
+% git push origin develop
 ```
