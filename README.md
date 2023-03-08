@@ -1,14 +1,14 @@
 # nestjs
 
 ## check
-* ☑️ pnpm
-* ☑️ nestjs - install and start
-* ⬜️ pre-commit
-    * ☑️ husky - install and test
-    * ⬜️ commitlint - install and setting
-    * ⬜️ husky - set `commitlint`
+* [x] pnpm
+* [x] nestjs - install and start
+* [x] pre-commit
+    * [x] husky - install and test
+    * [x] commitlint - install and setting
+    * [x] husky - set `commitlint`
 
-* ⬜️ prisma
+* [ ] prisma
     * ...
 
 
