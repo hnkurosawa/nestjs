@@ -5,20 +5,28 @@
 * ✅ nestjs
     * install
     * start
+
+* ⬜️ precommit
+    * ⬜️ husky
+    * ⬜️ commitlint
+
 * ⬜️ prisma
     * ...
-* ⬜️ husky
-* ⬜️ commitlint
 
 
-### Command
+
+## construct..
+
+### pnpm, nestjs
+* https://pnpm.io/ja/motivation
+* https://docs.nestjs.com/first-steps
+
 
 ```shell
 # package.json 作成
 % pnpm init
 
 # nestjs
-# @link https://docs.nestjs.com/first-steps
 % pnpm install @nestjs/cli
 
 # project setup
@@ -80,6 +88,50 @@ $ pnpm run start
 ################################################################
 # nestjs start success ✨
 
-%
-
 ```
+
+## husky, commitlint
+
+### husky
+https://typicode.github.io/husky/#/
+
+#### install
+```shell
+# root
+% pnpm add -D husky
+```
+
+> To automatically have Git hooks enabled after install, edit package.json
+> インストール後にGit Hooks を自動的に有効にする?
+
+```shell 
+% pnpm pkg set scripts.prepare="husky install"
+```
+
+```json
+// package.json
+{
+  "scripts": {
+    "prepare": "husky install"
+  }
+}
+```
+```shell
+% pnpm husky install
+or 🐤
+% pnpm prepare
+
+> nestjs@1.0.0 prepare /Users/.../nestjs
+> husky install
+
+husky - Git hooks installed
+```
+
+#### create a hook
+
+```shell
+% pnpm husky add .husky/pre-commit "echo 'test'"
+
+husky - created .husky/pre-commit
+```
+
