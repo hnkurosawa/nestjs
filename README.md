@@ -1,14 +1,12 @@
 # nestjs
 
 ## check
-* ✅ pnpm
-* ✅ nestjs
-    * install
-    * start
-
-* ⬜️ precommit
-    * ⬜️ husky
-    * ⬜️ commitlint
+* ☑️ pnpm
+* ☑️ nestjs - install and start
+* ⬜️ pre-commit
+    * ☑️ husky - install and test
+    * ⬜️ commitlint - install and setting
+    * ⬜️ husky - set `commitlint`
 
 * ⬜️ prisma
     * ...
@@ -105,6 +103,7 @@ https://typicode.github.io/husky/#/
 > インストール後にGit Hooks を自動的に有効にする?
 
 ```shell 
+# ❓設定する理由
 % pnpm pkg set scripts.prepare="husky install"
 ```
 
@@ -125,6 +124,7 @@ or 🐤
 > husky install
 
 husky - Git hooks installed
+# .husky が作成される
 ```
 
 #### create a hook
@@ -133,5 +133,19 @@ husky - Git hooks installed
 % pnpm husky add .husky/pre-commit "echo 'test'"
 
 husky - created .husky/pre-commit
+# .husky 配下の pre-commit に記載される
 ```
 
+### c.f.
+- https://github.com/pnpm/pnpm/issues/4657
+
+### commitlint
+https://commitlint.js.org/#/
+
+```shell
+# install
+% pnpm add @commitlint/{cli,config-conventional}
+
+# moduleの作成
+% echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commitlint.config.js
+```
