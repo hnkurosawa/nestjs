@@ -23,9 +23,8 @@
     * [x] husky - install and test
     * [x] commitlint - install and setting
     * [x] husky - set `commitlint`
-* [ ] prisma
-    * ...
-* [ ] docker
+* [x] prisma
+* [x] docker
 
 
 ## construct..
