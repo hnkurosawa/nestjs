@@ -1,5 +1,21 @@
 # nestjs
 
+- [nestjs](#nestjs)
+  - [check](#check)
+  - [construct..](#construct)
+    - [pnpm, nestjs](#pnpm-nestjs)
+  - [husky, commitlint](#husky-commitlint)
+    - [husky](#husky)
+      - [install](#install)
+      - [create a hook](#create-a-hook)
+    - [c.f.](#cf)
+    - [commitlint](#commitlint)
+    - [husky設定](#husky設定)
+  - [prisma, docker](#prisma-docker)
+    - [prisma](#prisma)
+    - [docker](#docker)
+
+
 ## check
 * [x] pnpm
 * [x] nestjs - install and start
@@ -7,10 +23,9 @@
     * [x] husky - install and test
     * [x] commitlint - install and setting
     * [x] husky - set `commitlint`
-
 * [ ] prisma
     * ...
-
+* [ ] docker
 
 
 ## construct..
@@ -181,3 +196,32 @@ husky - commit-msg hook exited with code 1 (error)
 ### 正しいのでpushする
 % git push origin develop
 ```
+
+## prisma, docker
+
+### prisma
+
+- [公式](https://www.prisma.io/docs/getting-started/quickstart)
+- [[Zenn]Prismaチュートリアル](https://zenn.dev/thirosue/books/49a4ee418743ed)
+- [[Zenn]1. Prismaのセットアップ　Prisma 入門ワークショップ(2021) ](https://zenn.dev/kanasugi/articles/7f90078574bb69)
+
+```shell
+% pnpm add prisma -D
+% pnpm prisma init
+```
+
+### docker
+
+- [[Zenn]【Docker】postgresqlの構築](https://zenn.dev/re24_1986/articles/b76c3fd8f76aec)
+
+docker-compose.yml 生成
+
+```shell
+## 起動
+% docker-compose up -d 
+
+## 停止
+% docker-compose stop
+```
+
+- [[Qiita]初心者向けdocker-composeコマンド逆引き](https://qiita.com/okyk/items/a374ddb3f853d1688820)
