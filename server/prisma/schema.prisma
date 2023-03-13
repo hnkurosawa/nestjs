@@ -11,9 +11,9 @@ datasource db {
 }
 
 model User {
-  id    Int           @id @default(autoincrement())
-  email String        @unique
-  name  String?
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  name      String
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   createdBy Int
@@ -36,6 +36,7 @@ model UserOrganization {
   userId          Int
   organization    Organization  @relation(fields:[organizationId], references: [id])
   organizationId  Int
+  role            String
 
   @@id([userId, organizationId])
 }
